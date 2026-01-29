@@ -1,0 +1,13 @@
+trigger:
+- main
+
+pool: todoInfra_pool # Pool where jobs in this pipeline will run unless otherwise specified.
+stages:
+  - stage: terraform install
+  - task: TerraformInstaller@1
+    inputs:
+      terraformVersion: 'latest'
+
+
+
+
